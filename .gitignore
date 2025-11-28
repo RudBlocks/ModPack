@@ -2,24 +2,23 @@
 # Minecraft Forge Modding Project .gitignore
 # ========================================
 
-# Ignore Minecraft saves and runtime data
-/saves/
-/crash-reports/
-/logs/
-/backups/
-/.versions/
-/run/                 # Forge run folder for temporary builds
-/*.log                # Any log files
+# IGNORE DIRECTORIES INSIDE THE .minecraft FOLDER:
+/.minecraft/saves/
+/.minecraft/crash-reports/
+/.minecraft/logs/
+/.minecraft/backups/
+/.minecraft/.versions/
+/.minecraft/run/                 # Forge run folder for temporary builds
+/.minecraft/*.log                # Any log files inside .minecraft
 *.tmp
 *.bak
 *.swp
 
-# Ignore Gradle / build artifacts
+# Ignore Gradle / build artifacts (these are likely still in your main root dir)
 /build/
 /out/
 /.gradle/
 /gradle/wrapper/gradle-wrapper.jar
-gradle-wrapper.properties
 
 # Ignore IDE/editor-specific files
 .vscode/
@@ -35,16 +34,16 @@ gradle-wrapper.properties
 Thumbs.db
 
 # ========================================
-# Keep these for modding
+# Keep these for modding (adjust paths to include .minecraft)
 # ========================================
 
-# Mods and mod configs
-!mods/
-!config/
-!scripts/
-!resourcepacks/
+# Mods and mod configs (adjust paths to include .minecraft)
+!/.minecraft/mods/
+!/.minecraft/config/
+!/.minecraft/scripts/
+!/.minecraft/resourcepacks/
 
-# Include your source code and assets
+# Include your source code and assets (these should probably stay in the root, outside .minecraft)
 !src/
 !assets/
 !data/
@@ -52,3 +51,59 @@ Thumbs.db
 !mods.toml
 !build.gradle
 !settings.gradle
+!gradlew
+!gradlew.bat# ========================================
+# Minecraft Forge Modding Project .gitignore
+# ========================================
+
+# IGNORE DIRECTORIES INSIDE THE .minecraft FOLDER:
+/.minecraft/saves/
+/.minecraft/crash-reports/
+/.minecraft/logs/
+/.minecraft/backups/
+/.minecraft/.versions/
+/.minecraft/run/                 # Forge run folder for temporary builds
+/.minecraft/*.log                # Any log files inside .minecraft
+*.tmp
+*.bak
+*.swp
+
+# Ignore Gradle / build artifacts (these are likely still in your main root dir)
+/build/
+/out/
+/.gradle/
+/gradle/wrapper/gradle-wrapper.jar
+
+# Ignore IDE/editor-specific files
+.vscode/
+.idea/
+*.iml
+*.class
+*.classpath
+*.project
+*.settings/
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
+
+# ========================================
+# Keep these for modding (adjust paths to include .minecraft)
+# ========================================
+
+# Mods and mod configs (adjust paths to include .minecraft)
+!/.minecraft/mods/
+!/.minecraft/config/
+!/.minecraft/scripts/
+!/.minecraft/resourcepacks/
+
+# Include your source code and assets (these should probably stay in the root, outside .minecraft)
+!src/
+!assets/
+!data/
+!pack.mcmeta
+!mods.toml
+!build.gradle
+!settings.gradle
+!gradlew
+!gradlew.bat
